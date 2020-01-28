@@ -20,8 +20,8 @@ def deploy():
                           extra_opts='--files-from=.git-files-list')
 
 
-    project.rsync_project(tgt_dir, 
-                          local_dir=".",
+    project.rsync_project(tgt_dir+"/", 
+                          local_dir="./",
                           extra_opts="--include '*.png' --include '*.pdf' --include '*.ipynb'  --include='*/' --exclude='*' " ,
 
                       upload=False)
